@@ -1,0 +1,19 @@
+Given the following form that the user must complete:
+
+[FORM]
+{{$fields}}
+[/FORM]
+
+And the message history:
+
+[MESSAGE_HISTORY]
+{{$messageHistory}}
+[/MESSAGE_HISTORY]
+
+Evaluate if the user has completed any of the incomplete inputs in the following message:
+
+[MESSAGE]
+{{$input}}
+[/MESSAGE]
+
+Respond with JSON in this format: [{"name":"the name of the field", "value":"the value you believe the user entered, or blank if they did not enter a value for this field", "message":"message back to the human asking them to enter this field"}]
